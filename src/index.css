@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #0e0a06;
+  --color-foreground: #e8d9bc;
+  --color-card: #1a1108;
+  --color-card-foreground: #e8d9bc;
+  --color-primary: #c9a84c;
+  --color-primary-foreground: #0e0a06;
+  --color-secondary: #261a09;
+  --color-secondary-foreground: #c4a97d;
+  --color-muted: #2a1f0e;
+  --color-muted-foreground: #9b8860;
+  --color-accent: #7a1f1f;
+  --color-accent-foreground: #f0e0d0;
+  --color-border: #3a2a14;
+  --color-ring: #c9a84c;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'EB Garamond', Garamond, serif;
+}
+
+html,
+body {
+  background-color: #0e0a06;
+  color: #e8d9bc;
+  font-family: 'EB Garamond', Garamond, serif;
+  line-height: 1.6;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3a2a14 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3a2a14;
+}
+
+.frame-border {
+  box-shadow:
+    0 0 0 1px #c9a84c,
+    0 0 0 7px #1a1108,
+    0 0 0 8px #c9a84c44,
+    0 4px 32px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes pinPulse {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  70% { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pin-pulse {
+  animation: pinPulse 1.8s ease-out infinite;
+}
+
+.frame-border-lg {
+  box-shadow:
+    0 0 0 2px #c9a84c,
+    0 0 0 12px #1a1108,
+    0 0 0 13px #c9a84c33,
+    0 8px 48px rgba(0, 0, 0, 0.8);
+}
