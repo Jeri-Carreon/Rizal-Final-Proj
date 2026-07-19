@@ -51,9 +51,9 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
       </div>
 
       {/* Map + panel layout */}
-      <div className="flex flex-col lg:flex-row" style={{ minHeight: "540px" }}>
+      <div className="flex flex-col lg:flex-row items-stretch" style={{ minHeight: "540px" }}>
         {/* MAP */}
-        <div className="relative flex-1 overflow-hidden" style={{ minHeight: "400px", background: "#0a0703" }}>
+        <div className="relative flex-1 overflow-hidden h-full" style={{ minHeight: "1000px", background: "#0a0703" }}>
           {/* Antique map background */}
           <img
             src={MAP_IMG}
@@ -197,7 +197,7 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
 
         {/* SIDE PANEL */}
         <div
-          className="lg:w-80 xl:w-96 flex-shrink-0 flex flex-col"
+          className="lg:w-80 xl:w-96 flex-shrink-0 flex flex-col h-full"
           style={{
             background: "#0e0a06",
             borderLeft: "1px solid #2a1f0e",
@@ -207,7 +207,7 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
           {selected ? (
             <LocationPanel woman={selected} onOpenExhibit={onOpenExhibit} />
           ) : (
-            <div className="flex-1 flex items-center justify-center p-8 text-center">
+            <div className="flex-1 flex items-center justify-center p-8 text-center min-h-65 lg:min-h-0">
               <p
                 className="font-body italic"
                 style={{ color: "#3a2a14", fontFamily: "'EB Garamond', Garamond, serif", fontSize: "1rem" }}
@@ -262,7 +262,7 @@ function LocationPanel({ woman, onOpenExhibit }: { woman: Woman; onOpenExhibit: 
   return (
     <div className="flex flex-col h-full overflow-y-auto">
       {/* Portrait thumbnail */}
-      <div className="relative overflow-hidden flex-shrink-0" style={{ aspectRatio: "16 / 7", background: "#0a0703" }}>
+      <div className="relative overflow-hidden flex-shrink-0" style={{ aspectRatio: "11 / 7", background: "#0a0703" }}>
         <img
           src={woman.thumbnail ?? woman.portrait}
           alt={woman.name}
