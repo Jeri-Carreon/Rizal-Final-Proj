@@ -177,7 +177,7 @@ export default function RizalBio() {
                 fontSize: "1.05rem",
               }}
             >
-              "What is the use of independence if the slaves of today will become the tyrants of tomorrow?"
+              "There are no tyrants where there are no slaves"
             </p>
             <p
               style={{ color: "#3a2a14", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", marginTop: "6px" }}

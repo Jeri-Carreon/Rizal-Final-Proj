@@ -14,7 +14,7 @@ const TRIBUTE_ICONS: Record<Tribute["type"], string> = {
   Diary: "◎",
   MEMOIR: "◎",
   Sculpture: "◆",
-  Gift: "❧",
+  Gift: "",
   Dedication: "◇",
 };
 
@@ -142,7 +142,7 @@ export default function Modal({ woman, onClose }: Props) {
             {/* Tab content — scrollable */}
             <div className="flex-1 overflow-y-auto p-7 md:p-9" key={activeTab} style={{ animation: "fadeIn 0.3s ease" }}>
               {activeTab === "Story" ? (
-                <StoryTab woman={woman} />
+                <StoryTab woman={woman} onShowTributes={() => setActiveTab("Tributes")} />
               ) : (
                 <TributesTab woman={woman} />
               )}
@@ -154,7 +154,7 @@ export default function Modal({ woman, onClose }: Props) {
   );
 }
 
-function StoryTab({ woman }: { woman: Woman }) {
+function StoryTab({ woman, onShowTributes }: { woman: Woman; onShowTributes: () => void }) {
   return (
     <>
       {/* Header row */}
@@ -198,14 +198,30 @@ function StoryTab({ woman }: { woman: Woman }) {
           — {woman.quoteSource}
         </footer>
       </blockquote>
-
-      <p
-        className="mt-6 text-xs uppercase tracking-widest cursor-pointer"
-        style={{ color: "#c9a84c", opacity: 0.5, fontSize: "0.55rem", letterSpacing: "0.3em" }}
-        onClick={() => {}}
+      <button
+        type="button"
+        className="mt-6 text-xs uppercase tracking-widest transition-all duration-300"
+        style={{
+          color: "#c9a84c",
+          opacity: 0.8,
+          fontSize: "0.58rem",
+          letterSpacing: "0.28em",
+          border: "1px solid #c9a84c44",
+          padding: "0.75rem 1rem",
+          background: "#120d06",
+        }}
+        onClick={onShowTributes}
+        onMouseEnter={(e) => {
+          (e.currentTarget as HTMLButtonElement).style.opacity = "1";
+          (e.currentTarget as HTMLButtonElement).style.borderColor = "#c9a84c";
+        }}
+        onMouseLeave={(e) => {
+          (e.currentTarget as HTMLButtonElement).style.opacity = "0.8";
+          (e.currentTarget as HTMLButtonElement).style.borderColor = "#c9a84c44";
+        }}
       >
-        See what Rizal made for her →
-      </p>
+        See what Rizal made or did for her
+      </button>
     </>
   );
 }
@@ -217,13 +233,13 @@ function TributesTab({ woman }: { woman: Woman }) {
         <p
           style={{ color: "#c9a84c", fontSize: "0.6rem", letterSpacing: "0.35em", textTransform: "uppercase", opacity: 0.65, marginBottom: "4px" }}
         >
-          What Rizal Made for Her
+          What Rizal Made or Did
         </p>
         <p
           className="font-body italic"
           style={{ fontFamily: "'EB Garamond', Garamond, serif", color: "#9b8860", fontSize: "0.9rem" }}
         >
-          Poems, letters, artwork, and gifts attributed to {woman.name.split(" ")[0]}
+          Historically grounded notes on what Rizal wrote, made, documented, or did in connection with {woman.name.split(" ")[0]}.
         </p>
       </div>
 
@@ -241,16 +257,20 @@ function TributeCard({ tribute }: { tribute: Tribute }) {
 
   return (
     <div
-      className="cursor-pointer transition-all duration-300"
+      className="transition-all duration-300"
       style={{
         background: expanded ? "#160f07" : "#0e0a06",
         border: `1px solid ${expanded ? "#c9a84c44" : "#2a1f0e"}`,
         transition: "background 0.3s, border-color 0.3s",
       }}
-      onClick={() => setExpanded((v) => !v)}
     >
       {/* Header row */}
-      <div className="flex items-start gap-4 p-4">
+      <button
+        type="button"
+        className="w-full flex items-start gap-4 p-4 text-left"
+        onClick={() => setExpanded((v) => !v)}
+        aria-expanded={expanded}
+      >
         {/* Icon */}
         <div
           className="flex-shrink-0 w-9 h-9 flex items-center justify-center"
@@ -278,11 +298,11 @@ function TributeCard({ tribute }: { tribute: Tribute }) {
         {/* Expand indicator */}
         <div
           className="flex-shrink-0 mt-1"
-          style={{ color: "#c9a84c", opacity: 0.5, fontSize: "0.7rem", transition: "transform 0.3s", transform: expanded ? "rotate(90deg)" : "rotate(0deg)" }}
+          style={{ color: "#c9a84c", opacity: 0.65, fontSize: "0.8rem", transition: "transform 0.3s", transform: expanded ? "rotate(90deg)" : "rotate(0deg)" }}
         >
           ›
         </div>
-      </div>
+      </button>
 
       {/* Expanded description */}
       {expanded && (
@@ -290,20 +310,18 @@ function TributeCard({ tribute }: { tribute: Tribute }) {
           className="px-4 pb-5"
           style={{ borderTop: "1px solid #1e160a", animation: "fadeIn 0.25s ease" }}
         >
-          <div className="pl-13">
-            <p
-              className="font-body leading-relaxed pt-4"
-              style={{
-                fontFamily: "'EB Garamond', Garamond, serif",
-                color: "#c4a97d",
-                fontSize: "0.97rem",
-                lineHeight: 1.78,
-                paddingLeft: "3.25rem",
-              }}
-            >
-              {tribute.description}
-            </p>
-          </div>
+          <p
+            className="font-body leading-relaxed pt-4"
+            style={{
+              fontFamily: "'EB Garamond', Garamond, serif",
+              color: "#c4a97d",
+              fontSize: "0.97rem",
+              lineHeight: 1.78,
+              paddingLeft: "3.25rem",
+            }}
+          >
+            {tribute.description}
+          </p>
         </div>
       )}
     </div>

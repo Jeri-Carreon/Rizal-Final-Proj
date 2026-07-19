@@ -1,13 +1,36 @@
 import { useState } from "react";
 import { women, type Woman } from "../data/women";
+import vintageWorldMap from "../imports/world-map-with-vintage-style_23-2148318256.avif";
 
 interface Props {
   onOpenExhibit: (w: Woman) => void;
 }
 
-const MAP_IMG =
-  "https://images.unsplash.com/photo-1723306009175-dca7d26f3350?w=2000&h=1400&fit=crop&auto=format";
+const mapPinPositions: Record<string, { x: number; y: number }> = {
+  teodora: { x: 76.2, y: 55.6 },
+  segunda: { x: 77.6, y: 46.8 },
+  leonor: { x: 82.2, y: 49.0 },
+  osei: { x: 85.7, y: 39.2 },
+  nelly: { x: 48.2, y: 31.6 },
+  consuelo: { x: 49.9, y: 34.4 },
+  suzanne: { x: 51.1, y: 27.8 },
+  josephine: { x: 82.9, y: 62.4 },
+};
 
+const pinLabelOffsets: Record<string, { x: number; y: number }> = {
+  teodora: { x: -150, y: 0 },
+  segunda: { x: -128, y: 0 },
+  leonor: { x: 34, y: 0 },
+  osei: { x: 32, y: 0 },
+  nelly: { x: -132, y: 0 },
+  consuelo: { x: 36, y: 22 },
+  suzanne: { x: 34, y: -10 },
+  josephine: { x: -232, y: 14 },
+};
+
+function getPinPosition(woman: Woman) {
+  return mapPinPositions[woman.id] ?? { x: woman.mapX, y: woman.mapY };
+}
 export default function JourneyMap({ onOpenExhibit }: Props) {
   const [selected, setSelected] = useState<Woman | null>(women[0]);
   const [hovered, setHovered] = useState<string | null>(null);
@@ -53,13 +76,19 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
       {/* Map + panel layout */}
       <div className="flex flex-col lg:flex-row items-stretch" style={{ minHeight: "540px" }}>
         {/* MAP */}
-        <div className="relative flex-1 overflow-hidden h-full" style={{ minHeight: "1000px", background: "#0a0703" }}>
-          {/* Antique map background */}
+        <div
+          className="relative flex-1 overflow-hidden h-full"
+          style={{ minHeight: "560px", height: "clamp(560px, 72vh, 820px)", background: "#0a0703" }}
+        >
           <img
-            src={MAP_IMG}
-            alt="Antique world map"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ filter: "sepia(0.85) brightness(0.35) contrast(1.1)", mixBlendMode: "luminosity" }}
+            src={vintageWorldMap}
+            alt="Vintage-style world map"
+            className="absolute inset-0 w-full h-full"
+            style={{
+              objectFit: "cover",
+              objectPosition: "center center",
+              filter: "brightness(0.62) sepia(0.2) saturate(0.95)",
+            }}
           />
 
           {/* Warm amber tint overlay */}
@@ -82,6 +111,8 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
             const isSelected = selected?.id === woman.id;
             const isHovered = hovered === woman.id;
             const active = isSelected || isHovered;
+            const position = getPinPosition(woman);
+            const labelOffset = pinLabelOffsets[woman.id] ?? { x: 24, y: -18 };
 
             return (
               <button
@@ -89,12 +120,14 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
                 onClick={() => setSelected(woman)}
                 onMouseEnter={() => setHovered(woman.id)}
                 onMouseLeave={() => setHovered(null)}
-                className="absolute focus:outline-none"
+                className="absolute flex items-center justify-center focus:outline-none"
                 style={{
-                  left: `${woman.mapX}%`,
-                  top: `${woman.mapY}%`,
+                  left: `${position.x}%`,
+                  top: `${position.y}%`,
                   transform: "translate(-50%, -50%)",
-                  zIndex: active ? 20 : 10,
+                  width: "52px",
+                  height: "52px",
+                  zIndex: active ? 30 : 20,
                 }}
                 aria-label={`Select location: ${woman.location}`}
               >
@@ -103,7 +136,7 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
                   <span
                     className="absolute rounded-full pin-pulse"
                     style={{
-                      inset: "-8px",
+                      inset: "-10px",
                       border: "1px solid #c9a84c",
                       borderRadius: "50%",
                       opacity: 0,
@@ -115,58 +148,52 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
                 <span
                   className="absolute rounded-full"
                   style={{
-                    inset: "-5px",
-                    border: `1px solid ${active ? "#c9a84c" : "#c9a84c44"}`,
+                    inset: "8px",
+                    background: active ? "rgba(201,168,76,0.22)" : "rgba(10,7,3,0.78)",
+                    border: `2px solid ${active ? "#f0cf73" : "#c9a84c"}`,
                     borderRadius: "50%",
-                    transition: "border-color 0.3s, opacity 0.3s",
+                    boxShadow: "0 0 0 2px rgba(10,7,3,0.85), 0 0 18px rgba(201,168,76,0.35)",
+                    transition: "all 0.3s ease",
                   }}
                 />
-
-                {/* Dot */}
+                {/* Numbered marker */}
                 <span
-                  className="relative block rounded-full"
+                  className="relative flex items-center justify-center rounded-full"
                   style={{
-                    width: active ? "12px" : "8px",
-                    height: active ? "12px" : "8px",
-                    background: active ? "#c9a84c" : "#c9a84c88",
-                    boxShadow: active ? "0 0 12px #c9a84c, 0 0 24px #c9a84c66" : "none",
+                    width: active ? "28px" : "24px",
+                    height: active ? "28px" : "24px",
+                    background: active ? "#f0cf73" : "#c9a84c",
+                    color: "#0a0703",
+                    boxShadow: active ? "0 0 16px #c9a84c, 0 0 30px #c9a84c66" : "0 0 10px rgba(201,168,76,0.55)",
                     transition: "all 0.3s ease",
                     borderRadius: "50%",
+                    fontFamily: "'Playfair Display', Georgia, serif",
+                    fontSize: "0.72rem",
+                    fontWeight: 700,
+                    lineHeight: 1,
                   }}
-                />
+                >
+                  {woman.numeral}
+                </span>
 
-                {/* Tooltip label on hover */}
-                {isHovered && !isSelected && (
-                  <div
-                    className="absolute pointer-events-none whitespace-nowrap px-2 py-1"
-                    style={{
-                      bottom: "calc(100% + 10px)",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      background: "rgba(10,7,3,0.95)",
-                      border: "1px solid #3a2a14",
-                      color: "#e8d9bc",
-                      fontSize: "0.65rem",
-                      letterSpacing: "0.1em",
-                      fontFamily: "'EB Garamond', Garamond, serif",
-                    }}
-                  >
-                    {woman.location}
-                    <div
-                      style={{
-                        position: "absolute",
-                        bottom: "-5px",
-                        left: "50%",
-                        transform: "translateX(-50%)",
-                        width: 0,
-                        height: 0,
-                        borderLeft: "5px solid transparent",
-                        borderRight: "5px solid transparent",
-                        borderTop: "5px solid #3a2a14",
-                      }}
-                    />
-                  </div>
-                )}
+                <div
+                  className="hidden md:block absolute pointer-events-none whitespace-nowrap px-2 py-1"
+                  style={{
+                    left: `calc(50% + ${labelOffset.x}px)`,
+                    top: `calc(50% + ${labelOffset.y}px)`,
+                    transform: "translateY(-50%)",
+                    background: "rgba(10,7,3,0.86)",
+                    border: `1px solid ${active ? "#c9a84c" : "#6f5727"}`,
+                    color: active ? "#f0cf73" : "#e8d9bc",
+                    fontSize: "0.54rem",
+                    letterSpacing: "0.13em",
+                    textTransform: "uppercase",
+                    fontFamily: "'EB Garamond', Garamond, serif",
+                    boxShadow: "0 6px 14px rgba(0,0,0,0.35)",
+                  }}
+                >
+                  {woman.location}
+                </div>
               </button>
             );
           })}
@@ -179,13 +206,15 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
             {women.map((woman, i) => {
               if (i === 0) return null;
               const prev = women[i - 1];
+              const from = getPinPosition(prev);
+              const to = getPinPosition(woman);
               return (
                 <line
                   key={woman.id}
-                  x1={`${prev.mapX}%`}
-                  y1={`${prev.mapY}%`}
-                  x2={`${woman.mapX}%`}
-                  y2={`${woman.mapY}%`}
+                  x1={`${from.x}%`}
+                  y1={`${from.y}%`}
+                  x2={`${to.x}%`}
+                  y2={`${to.y}%`}
                   stroke="#c9a84c"
                   strokeWidth="0.5"
                   strokeDasharray="3 5"

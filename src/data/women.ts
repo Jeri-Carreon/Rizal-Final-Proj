@@ -1,6 +1,8 @@
 import segundaPortrait from "../imports/images.jpeg";
 import leonorPortrait from "../imports/Leonor_Rivera.jpg";
 import leonorThumbnail from "../imports/images-2.jpeg";
+import nellyPortrait from "../../assets/nelly-boustead.jpg";
+import consueloPortrait from "../../assets/consuelo-ortiga.jpg";
 
 export interface Tribute {
   type:
@@ -45,8 +47,8 @@ export const women: Woman[] = [
     role: "Mother",
     relationship: "His first and greatest teacher",
     location: "Calamba, Laguna",
-    mapX: 82.0,
-    mapY: 41.8,
+    mapX: 83.66,
+    mapY: 42.1,
     portrait:
       "../../../assets/teodora.webp",
     bio: "Doña Teodora Alonso Realonda was born November 9, 1827, in Manila. As José's first teacher, she taught him the alphabet, prayers, and the value of education long before he entered formal schooling, and Rizal often credited her for nurturing his love of reading, literature, and learning. In 1871, she was imprisoned by Spanish colonial authorities on false accusations of attempted poisoning, an injustice that deeply affected Rizal and became one of the earliest personal events shaping his reformist ideals. Throughout his years abroad, Rizal regularly wrote letters to his mother, updating her about his studies and expressing concern for her health, and his greatest tribute was becoming an ophthalmologist so he could treat her worsening cataracts and restore her eyesight. She died August 16, 1911.",
@@ -57,22 +59,16 @@ export const women: Woman[] = [
       "Calamba was a prosperous agricultural town, which was dominated by Dominican-owned haciendas. Although economically active because of rice and sugar production, many of the Filipino tenants suffered under unfair land practices, and growing up in this environment exposed Rizal to the inequalities that later influenced his nationalist writings.",
     tributes: [
       {
-        type: "Dedication",
-        title: "Rizal's First Teacher",
+        type: "Poem",
+        title: "Mi Primera Inspiracion / My First Inspiration",
         description:
-          "She became Rizal's first teacher and one of the greatest influences on his intellectual and moral development. She taught him the alphabet, prayers, and the value of education long before he entered formal schooling.",
+          "Rizal is traditionally credited with writing this early poem as a birthday tribute to his mother while he was a young Ateneo student. It presents Teodora as the first source of his learning and literary inspiration.",
       },
       {
         type: "Letters",
-        title: "Letters While Abroad",
+        title: "Letters and Medical Care for His Mother",
         description:
-          "Throughout the years abroad, Rizal regularly wrote letters to Teodora, updating her about his studies and expressing concern for her health.",
-      },
-      {
-        type: "Dedication",
-        title: "Became an Ophthalmologist",
-        description:
-          "Rizal's greatest tribute to Teodora was becoming an ophthalmologist so he could treat her worsening cataracts and restore her eyesight.",
+          "Rizal regularly wrote to his family while abroad and trained as an ophthalmologist partly because of Teodora's failing eyesight. His practical tribute to her was not only literary: he wanted to treat her cataracts himself.",
       },
     ],
   },
@@ -84,8 +80,8 @@ export const women: Woman[] = [
     role: "First Love",
     relationship: "Rizal's first love",
     location: "Trozo, Manila",
-    mapX: 82.8,
-    mapY: 42.5,
+    mapX: 83.61,
+    mapY: 41.89,
     portrait: "../../../assets/solis.webp",
     bio: "Segunda Solis Katigbak was a young woman from Lipa, Batangas, and is widely recognized as Jose Rizal's first love. She came from a respected family and was known for her beauty, intelligence, and gentle personality. Rizal was about 16 years old when they met, while Segunda was around 14 years old. Their romance was short-lived because Segunda was already engaged to Manuel Luz, a fellow Batangueño. Despite this, Rizal regarded her as his first experience of romantic love, and the memory remained significant throughout his life.",
     quote: "She was the first to awaken in me the idea of what love might someday be.",
@@ -97,7 +93,7 @@ export const women: Woman[] = [
         type: "MEMOIR",
         title: "Memorias de un Estudiante de Manila",
         description:
-          "Years later, Rizal wrote about Segunda in his memoirs, Memorias de un Estudiante de Manila, a written record of the young woman from Lipa, Batangas who became his first experience of romantic love, even though their brief acquaintance had ended long before with her engagement to Manuel Luz.",
+          "Rizal later remembered Segunda in his student memoirs as his first love. There is no well-established surviving poem, artwork, or gift specifically made for her; what remains is his written recollection of the brief, frustrated romance.",
       },
     ],
   },
@@ -109,8 +105,8 @@ export const women: Woman[] = [
       role: "Great Love",
       relationship: "Greatest love; inspiration for Maria Clara",
       location: "Intramuros, Manila",
-      mapX: 80.8,
-      mapY: 42.5,
+      mapX: 83.6,
+      mapY: 41.89,
       portrait: "../../../assets/Leonor_Rivera.webp",
       thumbnail: "../../../assets/Leonor_Rivera.webp",
       bio: "Lenoro Rivera Bauzon born on April 11, 1867, died on August 28. 1893. She was Rizal's long-time sweetheart and fiancée, and their relationship lasted for about eleven years, mostly maintained through letters while Rizal studied in Europe. Her family, particularly her mother, was against their relationship and secretly withheld many of Rizal's letters. Eventually, she got married to the British railway engineer Henry Charles Kipping, which left Rizal heartbroken. Leonor became the inspiration for Maria Clara, who is the heroine of Noli Me Tangere. Their romance remains one of the best-known love stories in Philippine history and significantly influenced Rizal's emotional life and literary works.",
@@ -121,9 +117,15 @@ export const women: Woman[] = [
       tributes: [
         {
           type: "Letters",
-          title: "Letters, Sketches, and Illustrated Correspondence",
+          title: "Courtship Letters Across Distance",
           description:
-            "Rizal sent Leonor numerous love letters, sketches, poems, and illustrated correspondence while studying abroad. His portrayal of Maria Clara is also widely regarded as a literary tribute to Leonor's character and their relationship.",
+            "Rizal and Leonor Rivera maintained their relationship largely through letters while he was away. Many accounts describe her family, especially her mother, as blocking or withholding correspondence, which helped end the relationship.",
+        },
+        {
+          type: "Novel Character",
+          title: "Maria Clara in Noli Me Tangere",
+          description:
+            "Leonor Rivera is widely identified as a major inspiration for Maria Clara, the sheltered heroine of Noli Me Tangere. This is the clearest literary echo of Rizal's relationship with Leonor, though Maria Clara is also a crafted fictional character shaped by Rizal's critique of colonial society.",
         },
       ],
     },
@@ -135,8 +137,8 @@ export const women: Woman[] = [
       role: "Japanese Sweetheart",
       relationship: "His companion in Meiji-era Tokyo",
       location: "Tokyo, Japan",
-      mapX: 87.8,
-      mapY: 30.2,
+      mapX: 88.79,
+      mapY: 30.18,
       portrait: "../../../assets/osei.webp",
       bio: "Seiko Usui, also affectionately called O-Sei-San, belonged to a respected Japanese family and met Rizal during his stay in Tokyo in 1888. She was fluent in English and French, as she served as Rizal's guide, interpreter, and companion as he explored Japanese culture. Their relationship lasted only about a month before Rizal continued his journey to the United States. Rizal admired O-Sei-San's intelligence, independence, and patriotism. He was also reportedly tempted to remain in Japan permanently, but he ultimately chose to continue his mission for the Philippines.",
       quote: "It was a happy golden month I spent with you.",
@@ -146,9 +148,9 @@ export const women: Woman[] = [
       tributes: [
         {
           type: "Diary",
-          title: "Diary Mentions and Farewell Note",
+          title: "Diary Memories of Japan",
           description:
-            "Rizal frequently mentioned O-Sei-San in his diary and left her a heartfelt farewell note, writing that he had spent \"a happy golden month\" with her, and their relationship became one of the most memorable episodes of Rizal's travels abroad.",
+            "Rizal recorded his Japanese stay as one of the happiest episodes of his travels and associated that memory with O-Sei-San, who helped him experience Tokyo and Japanese culture. The most reliable tribute here is diary remembrance, not a separate surviving artwork.",
         },
       ],
     },
@@ -160,10 +162,9 @@ export const women: Woman[] = [
     role: "Parisian Suitor",
     relationship: "His rejected proposal in Biarritz",
     location: "Biarritz, France",
-    mapX: 48.2,
-    mapY: 25.8,
-    portrait:
-      "https://images.unsplash.com/photo-1752317591860-aadd6ff38d90?w=600&h=800&fit=crop&auto=format",
+    mapX: 49.57,
+    mapY: 25.84,
+    portrait: nellyPortrait,
     bio: "Nelly Boustead was a Filipina socialite of the expatriate ilustrado class, living among the leisure and salons of Biarritz. Rizal stayed with her family for a period, and they fenced together, debated philosophy, and walked the Atlantic promenades. A genuine attachment formed. When Rizal eventually proposed, Nelly set a single condition: that he convert from Catholicism. Rizal, unwilling to perform a faith he did not hold, refused. They parted without hostility — an ending almost more melancholy for its civility.",
     quote:
       "Even rejection, when done with honesty, leaves no wound that cannot heal.",
@@ -173,16 +174,10 @@ export const women: Woman[] = [
       "Biarritz in the late 1880s was the resort playground of European royalty and the wealthy expatriate class. Napoleon III had made it fashionable decades earlier; by Rizal's time it was a city of grand Baroque hotels, ocean promenades, and casino culture. The Boustead family represented the Filipino ilustrado class that had achieved a comfortable European life — speaking French and English, attending salons, maintaining a cultured distance from the colonial troubles of their homeland. The Atlantic wind off the Basque coast carried, for these expatriates, neither fish nor salt but the particular melancholy of the perpetually displaced.",
     tributes: [
       {
-        type: "Sculpture",
-        title: "Portrait Bust, circa 1890",
+        type: "Letters",
+        title: "Proposal and Correspondence",
         description:
-          "Rizal was a gifted sculptor — self-taught, working in clay and occasionally plaster. During his time with the Boustead family he sculpted a small portrait bust of Nelly, which she kept. It is one of several portrait sculptures he made of women he admired, evidence of an impulse to capture likeness as a form of sustained devotion.",
-      },
-      {
-        type: "Artwork",
-        title: "Watercolor Portrait Sketch, 1890",
-        description:
-          "Beyond the bust, Rizal made a watercolor sketch of Nelly during their time in Biarritz — part of his ongoing habit of drawing the people around him as a form of attention, remembrance, and sometimes courtship. The sketch was affectionate in execution, careful in its rendering of her features.",
+          "Rizal seriously considered marriage with Nelly Boustead and proposed to her, but the relationship ended over religious differences and practical concerns. No specific surviving poem, sculpture, or artwork for Nelly is firmly documented, so this exhibit treats the proposal and correspondence as the historical record rather than inventing an object.",
       },
     ],
   },
@@ -194,10 +189,9 @@ export const women: Woman[] = [
     role: "Madrid Admirer",
     relationship: "His carefully restrained affection",
     location: "Madrid, Spain",
-    mapX: 47.2,
-    mapY: 27.2,
-    portrait:
-      "https://images.unsplash.com/photo-1752317591526-6cac646cc05b?w=600&h=800&fit=crop&auto=format",
+    mapX: 48.97,
+    mapY: 27.55,
+    portrait: consueloPortrait,
     bio: 'Consuelo Ortiga y Pérez was the daughter of Don Pablo Ortiga, former Manila mayor, whose Madrid home served as a gathering place for Filipino expatriates and reformists. She was vivacious, intelligent, and openly fond of Rizal. He, in turn, admired her deeply — but suppressed his feelings out of loyalty to Leonor Rivera and profound respect for the family\'s hospitality. The restraint cost him something. He later dedicated to her the poem "A La Señorita C.O. y P.," a tender act of sublimated devotion.',
     quote:
       "Some loves are expressed best in the things left unsaid.",
@@ -208,15 +202,9 @@ export const women: Woman[] = [
       {
         type: "Poem",
         title:
-          '"A La Señorita C.O. y P." (To Miss C.O. y P.), 1883',
+          '"A La Senorita C.O. y R." (To Miss C.O. y R.), 1883',
         description:
-          "This formal dedication poem in Spanish is one of Rizal's most carefully coded expressions of feeling. He admires, praises, and mourns — all in language calibrated to never cross a line he had drawn for himself. The initials in the title were transparent to anyone in their social circle. Consuelo received it and understood exactly what it was and what it was not.",
-      },
-      {
-        type: "Gift",
-        title: "Decorated Spanish Fan, 1883",
-        description:
-          "Rizal painted a traditional Spanish folding fan with floral motifs — a common token of esteem in 1880s Madrid society — and gave it to Consuelo. The act was proper, socially unremarkable, and yet intimate: he had spent time painting it, selecting its motifs, handling it before she touched it. It was a gift that communicated exactly as much as he allowed himself to say.",
+          "Rizal wrote this Spanish poem in Madrid and dedicated it to Consuelo Ortiga y Rey. The poem is the clearest documented work connected to Consuelo; Rizal eventually stepped back because he was still attached to Leonor Rivera and because his friend Eduardo de Lete also loved Consuelo.",
       },
     ],
   },
@@ -228,8 +216,8 @@ export const women: Woman[] = [
       role: "Brussels Romance",
       relationship: "A fond friendship during his time in Brussels",
       location: "Brussels, Belgium",
-      mapX: 50.2,
-      mapY: 21.2,
+      mapX: 51.21,
+      mapY: 21.75,
       portrait:
         "../../../assets/suzanne-jacoby.webp",
       bio: "Suzanne Jacoby was a Belgian woman, the niece of Rizal's landlady in Brussels, where he lived while writing El Filibusterismo. She reportedly grew fond of him during his stay, and when he departed for Madrid in 1890, she wept at his leaving. She continued writing to him afterward, though, as with several of the women in his life, no specific poem or major surviving tribute is documented for her the way there is for Leonor Rivera or Consuelo Ortiga.",
@@ -240,9 +228,9 @@ export const women: Woman[] = [
       tributes: [
         {
           type: "Letters",
-          title: "Correspondence After His Departure",
+          title: "A Remembered Brussels Attachment",
           description:
-            "After Rizal left for Madrid in 1890, Suzanne Jacoby continued writing to him, having grown fond of him and wept at his departure. No specific surviving letters or major documented tribute exists for her in the way there is for other women in Rizal's life, such as Leonor Rivera or Consuelo Ortiga.",
+            "Suzanne Jacoby is remembered as the niece of Rizal's Brussels landladies who grew attached to him while he was working on El Filibusterismo. There is no firmly documented poem, artwork, or gift made for Suzanne; the accurate note is that the attachment appears in biographical accounts, not in a known dedicated work by Rizal.",
         },
       ],
     },
@@ -254,8 +242,8 @@ export const women: Woman[] = [
       role: "Common-Law Wife",
       relationship: "His last love, present until the end",
       location: "Dapitan, Zamboanga del Norte",
-      mapX: 83.8,
-      mapY: 45.2,
+      mapX: 84.28,
+      mapY: 45.19,
       portrait:
         "../../../assets/josephine.webp",
       bio: "Marie Josephine Leopoldine Bracken was born August 9, 1876 at Victoria Barracks in Hong Kong to Irish parents — James Bracken, a British Army corporal, and Elizabeth Jane McBride. Her mother died shortly after childbirth, and her father gave her up for adoption to his American friend, the blind engineer George Taufer. She traveled to Dapitan in February 1895 to have Rizal, a respected ophthalmologist, examine Taufer's failing eyesight. Taufer's condition was beyond treatment, but Rizal fell for Josephine instead; Taufer initially opposed the relationship but eventually gave in. A local priest agreed to marry them only with the Bishop of Cebu's permission, which never came through before Taufer's abrupt departure forced the matter to stall. The couple's son was stillborn during Rizal's exile. After his execution, colonial authorities pressured her to leave the Philippines; she later remarried in Hong Kong and died of tuberculosis in 1902, at age 25.",
@@ -266,15 +254,15 @@ export const women: Woman[] = [
       tributes: [
         {
           type: "Poem",
-          title: "Mi Último Adiós",
+          title: "Mi Ultimo Adios",
           description:
-            "She is widely believed to be the \"sweet stranger\" mentioned in the closing lines of Rizal's final poem, Mi Último Adiós, written the night before his execution.",
+            "Rizal wrote Mi Ultimo Adios on the eve of his execution. Josephine Bracken is often linked to the poem's final affectionate address, commonly interpreted as a reference to a beloved stranger, though the poem itself does not name her directly.",
         },
         {
           type: "Dedication",
-          title: "Marriage at Fort Santiago",
+          title: "Final Companionship and Disputed Marriage",
           description:
-            "Hours before he was shot on December 30, 1896, the two were reportedly married at Fort Santiago following his alleged reconciliation with the Catholic Church — though this marriage is disputed, since no official record of it was ever found, despite being attested to by Bracken and the officiating priest.",
+            "Josephine was with Rizal during his Dapitan exile and remained central to his final years. Their reported marriage shortly before his execution is part of Rizal tradition, but historians note that the documentary record is contested, so it should be presented carefully rather than as a settled artifact.",
         },
       ],
     },
