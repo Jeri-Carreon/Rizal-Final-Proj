@@ -52,7 +52,7 @@ export default function Modal({ woman, onClose }: Props) {
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center transition-colors duration-200"
+          className="absolute top-3 right-4 z-10 w-6 h-6 flex items-center justify-center transition-colors duration-200"
           style={{ color: "#9b8860", border: "1px solid #2a1f0e", background: "#1a1108", fontSize: "1.1rem" }}
           onMouseEnter={(e) => ((e.currentTarget as HTMLButtonElement).style.color = "#c9a84c")}
           onMouseLeave={(e) => ((e.currentTarget as HTMLButtonElement).style.color = "#9b8860")}
@@ -63,7 +63,7 @@ export default function Modal({ woman, onClose }: Props) {
 
         <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
           {/* Portrait side — fixed */}
-          <div className="md:w-2/5 flex-shrink-0 relative" style={{ minHeight: "280px", background: "#0a0703" }}>
+          <div className="md:w-2/5 flex-shrink-0 relative" style={{ minHeight: "680px", background: "#0a0703" }}>
             <img
               src={woman.portrait}
               alt={`Portrait representing ${woman.name}`}
