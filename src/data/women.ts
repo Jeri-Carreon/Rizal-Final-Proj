@@ -162,8 +162,8 @@ export const women: Woman[] = [
     role: "Parisian Suitor",
     relationship: "His rejected proposal in Biarritz",
     location: "Biarritz, France",
-    mapX: 49.57,
-    mapY: 25.84,
+    mapX: 20.57,
+    mapY: 20.84,
     portrait: nellyPortrait,
     bio: "Nelly Boustead was a Filipina socialite of the expatriate ilustrado class, living among the leisure and salons of Biarritz. Rizal stayed with her family for a period, and they fenced together, debated philosophy, and walked the Atlantic promenades. A genuine attachment formed. When Rizal eventually proposed, Nelly set a single condition: that he convert from Catholicism. Rizal, unwilling to perform a faith he did not hold, refused. They parted without hostility — an ending almost more melancholy for its civility.",
     quote:

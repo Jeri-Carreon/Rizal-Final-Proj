@@ -7,25 +7,25 @@ interface Props {
 }
 
 const mapPinPositions: Record<string, { x: number; y: number }> = {
-  teodora: { x: 76.2, y: 55.6 },
-  segunda: { x: 77.6, y: 46.8 },
-  leonor: { x: 82.2, y: 49.0 },
-  osei: { x: 85.7, y: 39.2 },
-  nelly: { x: 48.2, y: 31.6 },
-  consuelo: { x: 49.9, y: 34.4 },
-  suzanne: { x: 51.1, y: 27.8 },
-  josephine: { x: 82.9, y: 62.4 },
+  teodora: { x: 85.2, y: 49.6 },
+  segunda: { x: 82.0, y: 47.8 },
+  leonor: { x: 85.2, y: 44.5 },
+  osei: { x: 86.7, y: 34.2 },
+  nelly: { x: 47.2, y: 26.6 },
+  consuelo: { x: 44.9, y: 32.4 },
+  suzanne: { x: 48.1, y: 20.8 },
+  josephine: { x: 84.0, y: 54.4 },
 };
 
 const pinLabelOffsets: Record<string, { x: number; y: number }> = {
-  teodora: { x: -150, y: 0 },
+  teodora: { x: 30, y: 0 },
   segunda: { x: -128, y: 0 },
   leonor: { x: 34, y: 0 },
   osei: { x: 32, y: 0 },
-  nelly: { x: -132, y: 0 },
-  consuelo: { x: 36, y: 22 },
-  suzanne: { x: 34, y: -10 },
-  josephine: { x: -232, y: 14 },
+  nelly: { x: -142, y: 0 },
+  consuelo: { x: 25, y: 2 },
+  suzanne: { x: 27, y: 0 },
+  josephine: { x: 25, y: 0 },
 };
 
 function getPinPosition(woman: Woman) {
@@ -115,8 +115,9 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
             const labelOffset = pinLabelOffsets[woman.id] ?? { x: 24, y: -18 };
 
             return (
+              <div key={woman.id} className="contents">
               <button
-                key={woman.id}
+                type="button"
                 onClick={() => setSelected(woman)}
                 onMouseEnter={() => setHovered(woman.id)}
                 onMouseLeave={() => setHovered(null)}
@@ -125,8 +126,8 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
                   left: `${position.x}%`,
                   top: `${position.y}%`,
                   transform: "translate(-50%, -50%)",
-                  width: "52px",
-                  height: "52px",
+                  width: "40px",
+                  height: "40px",
                   zIndex: active ? 30 : 20,
                 }}
                 aria-label={`Select location: ${woman.location}`}
@@ -136,7 +137,7 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
                   <span
                     className="absolute rounded-full pin-pulse"
                     style={{
-                      inset: "-10px",
+                      inset: "-12px",
                       border: "1px solid #c9a84c",
                       borderRadius: "50%",
                       opacity: 0,
@@ -148,7 +149,7 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
                 <span
                   className="absolute rounded-full"
                   style={{
-                    inset: "8px",
+                    inset: "2px",
                     background: active ? "rgba(201,168,76,0.22)" : "rgba(10,7,3,0.78)",
                     border: `2px solid ${active ? "#f0cf73" : "#c9a84c"}`,
                     borderRadius: "50%",
@@ -160,8 +161,8 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
                 <span
                   className="relative flex items-center justify-center rounded-full"
                   style={{
-                    width: active ? "28px" : "24px",
-                    height: active ? "28px" : "24px",
+                    width: active ? "28px" : "26px",
+                    height: active ? "28px" : "26px",
                     background: active ? "#f0cf73" : "#c9a84c",
                     color: "#0a0703",
                     boxShadow: active ? "0 0 16px #c9a84c, 0 0 30px #c9a84c66" : "0 0 10px rgba(201,168,76,0.55)",
@@ -175,26 +176,32 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
                 >
                   {woman.numeral}
                 </span>
-
-                <div
-                  className="hidden md:block absolute pointer-events-none whitespace-nowrap px-2 py-1"
-                  style={{
-                    left: `calc(50% + ${labelOffset.x}px)`,
-                    top: `calc(50% + ${labelOffset.y}px)`,
-                    transform: "translateY(-50%)",
-                    background: "rgba(10,7,3,0.86)",
-                    border: `1px solid ${active ? "#c9a84c" : "#6f5727"}`,
-                    color: active ? "#f0cf73" : "#e8d9bc",
-                    fontSize: "0.54rem",
-                    letterSpacing: "0.13em",
-                    textTransform: "uppercase",
-                    fontFamily: "'EB Garamond', Garamond, serif",
-                    boxShadow: "0 6px 14px rgba(0,0,0,0.35)",
-                  }}
-                >
-                  {woman.location}
-                </div>
               </button>
+              <button
+                type="button"
+                onClick={() => setSelected(woman)}
+                onMouseEnter={() => setHovered(woman.id)}
+                onMouseLeave={() => setHovered(null)}
+                className="hidden md:block absolute whitespace-nowrap px-2 py-1 focus:outline-none"
+                style={{
+                  left: `calc(${position.x}% + ${labelOffset.x}px)`,
+                  top: `calc(${position.y}% + ${labelOffset.y}px)`,
+                  transform: "translateY(-50%)",
+                  background: "rgba(10,7,3,0.86)",
+                  border: `1px solid ${active ? "#c9a84c" : "#6f5727"}`,
+                  color: active ? "#f0cf73" : "#e8d9bc",
+                  fontSize: "0.54rem",
+                  letterSpacing: "0.13em",
+                  textTransform: "uppercase",
+                  fontFamily: "'EB Garamond', Garamond, serif",
+                  boxShadow: "0 6px 14px rgba(0,0,0,0.35)",
+                  zIndex: active ? 31 : 21,
+                }}
+                aria-label={`Select location: ${woman.location}`}
+              >
+                {woman.location}
+              </button>
+              </div>
             );
           })}
 
