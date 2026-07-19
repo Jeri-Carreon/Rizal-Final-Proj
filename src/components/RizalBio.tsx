@@ -1,7 +1,5 @@
 import { useState } from "react";
-
-const PORTRAIT =
-  "https://images.unsplash.com/photo-1643296783622-52f8a8b14418?w=800&h=1100&fit=crop&auto=format";
+import Rizal from "../imports/Rizal.webp";
 
 const facts = [
   { label: "Born", value: "June 19, 1861 · Calamba, Laguna" },
@@ -17,13 +15,13 @@ const tabs = [
     id: "life",
     label: "Life",
     content:
-      "José Protasio Rizal Mercado y Alonso Realonda was born on June 19, 1861, in Calamba, a prosperous lakeside town in Laguna province, to a principalia family of mixed Chinese, Spanish, and Malay descent. The seventh of eleven children, he showed extraordinary aptitude from childhood — his mother, Teodora Alonso, taught him to read at age two. He would go on to speak twenty-two languages and earn degrees in medicine and philosophy from the Universidad Central de Madrid and the University of Paris.\n\nHe lived most of his adult life in exile — studying in Spain, traveling through France, Germany, England, Austria, and Japan, and writing the two novels that would ignite a revolution he himself never wished to lead. His genius was not the genius of the barricade but of the pen: he believed that a people who could read their own degradation with clear eyes would find their own way to demand better.",
+      "José Protasio Rizal Mercado y Alonso Realonda was born on June 19, 1861, in Calamba, a prosperous lakeside town in Laguna province, to a principalia family of mixed Chinese, Spanish, and Malay descent. The seventh of eleven children, he showed extraordinary aptitude from childhood — his mother, Teodora Alonso, taught him to read at an exceptionally young age. He would go on to speak twenty-two languages and earned degrees in Medicine and Philosophy and Letters at the Universidad Central de Madrid before pursuing advanced ophthalmology training in Paris and Heidelberg.\n\nHe lived most of his adult life in exile — studying in Spain, traveling through France, Germany, England, Austria, and Japan, and writing the two novels that would ignite a revolution he himself never wished to lead. His genius was not the genius of the barricade but of the pen: he believed that a people who could read their own degradation with clear eyes would find their own way to demand better.",
   },
   {
     id: "significance",
     label: "Significance",
     content:
-      "Rizal is the national hero of the Philippines — a designation that emerged not from military heroism but from the power of his writing to name and dignify a people who had been colonized for more than three centuries. His two novels, Noli Me Tángere and El Filibusterismo, were banned by the Spanish colonial government precisely because they worked: they gave the Filipino middle class a mirror, a language for their own suffering, and a model of Filipino dignity rendered in vivid, novelistic life.\n\nThe Spanish colonial authorities understood what they were dealing with. They executed him by firing squad on December 30, 1896, hoping that killing him would silence the movement. Instead, it sparked the Philippine Revolution. He was thirty-five years old. He had never held a gun.",
+      "Rizal is widely regarded as the national hero of the Philippines. — a designation that emerged not from military heroism but from the power of his writing to name and dignify a people who had been colonized for more than three centuries. His two novels, Noli Me Tángere and El Filibusterismo, were banned by the Spanish colonial government precisely because they worked: they gave the Filipino middle class a mirror, a language for their own suffering, and a model of Filipino dignity rendered in vivid, novelistic life.\n\nThe Spanish colonial authorities understood what they were dealing with. They executed him by firing squad on December 30, 1896, hoping that killing him would silence the movement. Instead, it sparked the Philippine Revolution. He was thirty-five years old. He had never held a gun.",
   },
   {
     id: "character",
@@ -42,14 +40,14 @@ export default function RizalBio() {
       id="about"
       style={{ background: "#0a0703", borderTop: "1px solid #2a1f0e", borderBottom: "1px solid #2a1f0e" }}
     >
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[40%_60%]">
         {/* Portrait column */}
         <div
-          className="lg:w-2/5 flex-shrink-0 relative overflow-hidden"
-          style={{ minHeight: "480px", background: "#060402" }}
+          className="h-[480px] lg:h-full relative overflow-hidden"
+          style={{ background: "#060402" }}
         >
           <img
-            src={PORTRAIT}
+            src={Rizal}
             alt="Period portrait representing José Rizal"
             className="absolute inset-0 w-full h-full object-cover object-top"
             style={{ filter: "sepia(0.4) brightness(0.7) contrast(1.1)" }}
@@ -85,7 +83,7 @@ export default function RizalBio() {
         </div>
 
         {/* Content column */}
-        <div className="flex-1 px-8 md:px-12 py-14">
+        <div className="px-8 md:px-12 py-14">
           {/* Section label */}
           <p
             style={{ color: "#c9a84c", fontSize: "0.6rem", letterSpacing: "0.4em", textTransform: "uppercase", opacity: 0.65, marginBottom: "6px" }}
@@ -149,7 +147,7 @@ export default function RizalBio() {
           </div>
 
           {/* Tab content */}
-          <div key={activeTab} style={{ animation: "fadeIn 0.35s ease" }}>
+          <div key={activeTab} className="lg:min-h-[320px]" style={{ animation: "fadeIn 0.35s ease" }}>
             {current.content.split("\n\n").map((para, i) => (
               <p
                 key={i}
@@ -179,12 +177,12 @@ export default function RizalBio() {
                 fontSize: "1.05rem",
               }}
             >
-              "I want to show to those who deprive us of manhood that we know how to fight and die like men."
+              "What is the use of independence if the slaves of today will become the tyrants of tomorrow?"
             </p>
             <p
               style={{ color: "#3a2a14", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", marginTop: "6px" }}
             >
-              — José Rizal, letter to Marcelo del Pilar, 1888
+              — José Rizal, <em>El Filibusterismo</em> (1891)
             </p>
           </div>
         </div>

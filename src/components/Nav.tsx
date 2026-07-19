@@ -18,7 +18,7 @@ export default function Nav({ activeSection, onNavigate }: Props) {
         className="font-display italic"
         style={{ fontFamily: "'Playfair Display', Georgia, serif", color: "#c9a84c", fontSize: "1rem", opacity: 0.8 }}
       >
-        Las Mujeres de Rizal
+        The Women Who Shaped José Rizal
       </div>
 
       {/* Section tabs */}

@@ -40,7 +40,7 @@ export default function Footer() {
           className="uppercase text-xs tracking-widest"
           style={{ color: "#2a1f0e", letterSpacing: "0.35em", fontSize: "0.6rem" }}
         >
-          Museo Virtual · Las Mujeres de Rizal · 2024
+          Museo Virtual · The Women Who Shaped José Rizal · 2024
         </p>
         <div className="h-px w-8" style={{ background: "#2a1f0e" }} />
       </div>

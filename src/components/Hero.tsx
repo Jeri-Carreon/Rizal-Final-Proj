@@ -38,7 +38,7 @@ export default function Hero() {
             color: "#e8d9bc",
           }}
         >
-          Las Mujeres
+          The Women 
         </h1>
         <h2
           className="font-display italic font-normal"
@@ -49,7 +49,7 @@ export default function Hero() {
             opacity: 0.85,
           }}
         >
-          de José Rizal
+          Who Shaped José Rizal
         </h2>
 
         {/* Ornamental divider */}
