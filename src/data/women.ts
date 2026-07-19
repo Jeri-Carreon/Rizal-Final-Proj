@@ -221,38 +221,31 @@ export const women: Woman[] = [
     ],
   },
   {
-    id: "suzanne",
-    numeral: "VII",
-    name: "Suzanne Jacoby",
-    years: "1869 – ?",
-    role: "Walloon Friend",
-    relationship: "His affectionate correspondent in Ghent",
-    location: "Ghent, Belgium",
-    mapX: 50.2,
-    mapY: 21.2,
-    portrait:
-      "https://images.unsplash.com/photo-1752317591734-74d999595b0c?w=600&h=800&fit=crop&auto=format",
-    bio: 'Suzanne Jacoby was the niece of Rizal\'s landlady in Ghent, Belgium, where he traveled in 1890 to have El Filibusterismo reprinted at lower cost. She was warm, witty, and called him affectionately "my little Japanese" — a nickname that made Rizal laugh and blush in equal measure. Their friendship was literary and playful rather than deeply romantic, but she offered something Rizal rarely permitted himself: lightness. In an exile defined by urgency and sacrifice, she gave him the rare gift of an uncomplicated smile.',
-    quote:
-      "She reminded me that even a man carrying a nation may sometimes laugh.",
-    quoteSource: "José Rizal, letter to Blumentritt, 1890",
-    placeInfo:
-      "Ghent in 1890 was a prosperous Flemish city, its gothic cathedral and medieval guild halls testifying to centuries of mercantile wealth. Rizal came specifically because printing was cheaper here than in Paris or Madrid — his second novel El Filibusterismo was printed by F. Meyer-Van Loo at a fraction of the cost he had been quoted elsewhere. The city had a working-class intellectual culture quite distinct from the French sophistication Rizal knew better: earnest, unpretentious, rooted in local pride rather than cosmopolitan performance.",
-    tributes: [
-      {
-        type: "Letters",
-        title: "Affectionate Correspondence, 1890 – 1891",
-        description:
-          'After leaving Ghent, Rizal maintained a warm correspondence with Suzanne Jacoby — lighter in tone than his letters to Blumentritt or Leonor, full of wordplay and mutual teasing. Her nickname for him, "my little Japanese," appeared in her letters to him; his replies matched her playfulness. These letters are among the most relaxed he ever wrote.',
-      },
-      {
-        type: "Artwork",
-        title: "Pencil Sketch (Keepsake), 1890",
-        description:
-          "Before leaving Ghent, Rizal left Suzanne a pencil sketch as a keepsake — his habitual parting gift to people who had mattered to him. The sketch is not catalogued among his surviving works, but his correspondence references it. He drew quickly and precisely, and she seems to have kept it.",
-      },
-    ],
-  },
+      id: "suzanne",
+      numeral: "VII",
+      name: "Suzanne Jacoby",
+      years: "",
+      role: "Brussels Romance",
+      relationship: "A fond friendship during his time in Brussels",
+      location: "Brussels, Belgium",
+      mapX: 50.2,
+      mapY: 21.2,
+      portrait:
+        "../../../assets/suzanne-jacoby.webp",
+      bio: "Suzanne Jacoby was a Belgian woman, the niece of Rizal's landlady in Brussels, where he lived while writing El Filibusterismo. She reportedly grew fond of him during his stay, and when he departed for Madrid in 1890, she wept at his leaving. She continued writing to him afterward, though, as with several of the women in his life, no specific poem or major surviving tribute is documented for her the way there is for Leonor Rivera or Consuelo Ortiga.",
+      quote: "She reminded me that even a man carrying a nation may sometimes laugh.",
+      quoteSource: "José Rizal, letter to Blumentritt, 1890",
+      placeInfo:
+        "Rizal met Suzanne Jacoby around 1890 in Brussels, Belgium, where she was the niece of his landlady during his stay there while he was finishing El Filibusterismo.",
+      tributes: [
+        {
+          type: "Letters",
+          title: "Correspondence After His Departure",
+          description:
+            "After Rizal left for Madrid in 1890, Suzanne Jacoby continued writing to him, having grown fond of him and wept at his departure. No specific surviving letters or major documented tribute exists for her in the way there is for other women in Rizal's life, such as Leonor Rivera or Consuelo Ortiga.",
+        },
+      ],
+    },
   {
       id: "josephine",
       numeral: "VIII",
