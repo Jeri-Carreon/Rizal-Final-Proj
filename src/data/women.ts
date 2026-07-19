@@ -262,7 +262,7 @@ export const women: Woman[] = [
       quote: "She came to Dapitan seeking sight for her father. She gave sight to me.",
       quoteSource: "attributed to José Rizal",
       placeInfo:
-        "Met: February 1895, in Dapitan, Zamboanga del Norte, Philippines — she arrived with her adoptive father, George Taufer, seeking Rizal's help as an ophthalmologist for Taufer's failing eyesight.",
+        "Rizal met Josephine Bracken in February 1895, in Dapitan, Zamboanga del Norte, Philippines — she arrived with her adoptive father, George Taufer, seeking Rizal's help as an ophthalmologist for Taufer's failing eyesight.",
       tributes: [
         {
           type: "Poem",
