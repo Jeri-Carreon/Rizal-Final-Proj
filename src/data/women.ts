@@ -221,78 +221,61 @@ export const women: Woman[] = [
     ],
   },
   {
-    id: "suzanne",
-    numeral: "VII",
-    name: "Suzanne Jacoby",
-    years: "1869 – ?",
-    role: "Walloon Friend",
-    relationship: "His affectionate correspondent in Ghent",
-    location: "Ghent, Belgium",
-    mapX: 50.2,
-    mapY: 21.2,
-    portrait:
-      "https://images.unsplash.com/photo-1752317591734-74d999595b0c?w=600&h=800&fit=crop&auto=format",
-    bio: 'Suzanne Jacoby was the niece of Rizal\'s landlady in Ghent, Belgium, where he traveled in 1890 to have El Filibusterismo reprinted at lower cost. She was warm, witty, and called him affectionately "my little Japanese" — a nickname that made Rizal laugh and blush in equal measure. Their friendship was literary and playful rather than deeply romantic, but she offered something Rizal rarely permitted himself: lightness. In an exile defined by urgency and sacrifice, she gave him the rare gift of an uncomplicated smile.',
-    quote:
-      "She reminded me that even a man carrying a nation may sometimes laugh.",
-    quoteSource: "José Rizal, letter to Blumentritt, 1890",
-    placeInfo:
-      "Ghent in 1890 was a prosperous Flemish city, its gothic cathedral and medieval guild halls testifying to centuries of mercantile wealth. Rizal came specifically because printing was cheaper here than in Paris or Madrid — his second novel El Filibusterismo was printed by F. Meyer-Van Loo at a fraction of the cost he had been quoted elsewhere. The city had a working-class intellectual culture quite distinct from the French sophistication Rizal knew better: earnest, unpretentious, rooted in local pride rather than cosmopolitan performance.",
-    tributes: [
-      {
-        type: "Letters",
-        title: "Affectionate Correspondence, 1890 – 1891",
-        description:
-          'After leaving Ghent, Rizal maintained a warm correspondence with Suzanne Jacoby — lighter in tone than his letters to Blumentritt or Leonor, full of wordplay and mutual teasing. Her nickname for him, "my little Japanese," appeared in her letters to him; his replies matched her playfulness. These letters are among the most relaxed he ever wrote.',
-      },
-      {
-        type: "Artwork",
-        title: "Pencil Sketch (Keepsake), 1890",
-        description:
-          "Before leaving Ghent, Rizal left Suzanne a pencil sketch as a keepsake — his habitual parting gift to people who had mattered to him. The sketch is not catalogued among his surviving works, but his correspondence references it. He drew quickly and precisely, and she seems to have kept it.",
-      },
-    ],
-  },
+      id: "suzanne",
+      numeral: "VII",
+      name: "Suzanne Jacoby",
+      years: "",
+      role: "Brussels Romance",
+      relationship: "A fond friendship during his time in Brussels",
+      location: "Brussels, Belgium",
+      mapX: 50.2,
+      mapY: 21.2,
+      portrait:
+        "../../../assets/suzanne-jacoby.webp",
+      bio: "Suzanne Jacoby was a Belgian woman, the niece of Rizal's landlady in Brussels, where he lived while writing El Filibusterismo. She reportedly grew fond of him during his stay, and when he departed for Madrid in 1890, she wept at his leaving. She continued writing to him afterward, though, as with several of the women in his life, no specific poem or major surviving tribute is documented for her the way there is for Leonor Rivera or Consuelo Ortiga.",
+      quote: "She reminded me that even a man carrying a nation may sometimes laugh.",
+      quoteSource: "José Rizal, letter to Blumentritt, 1890",
+      placeInfo:
+        "Rizal met Suzanne Jacoby around 1890 in Brussels, Belgium, where she was the niece of his landlady during his stay there while he was finishing El Filibusterismo.",
+      tributes: [
+        {
+          type: "Letters",
+          title: "Correspondence After His Departure",
+          description:
+            "After Rizal left for Madrid in 1890, Suzanne Jacoby continued writing to him, having grown fond of him and wept at his departure. No specific surviving letters or major documented tribute exists for her in the way there is for other women in Rizal's life, such as Leonor Rivera or Consuelo Ortiga.",
+        },
+      ],
+    },
   {
-    id: "josephine",
-    numeral: "VIII",
-    name: "Josephine Bracken",
-    years: "1876 – 1902",
-    role: "Common-Law Wife",
-    relationship: "His last love, present until the end",
-    location: "Dapitan, Zamboanga del Norte",
-    mapX: 83.8,
-    mapY: 45.2,
-    portrait:
-      "https://images.unsplash.com/photo-1743267216980-a5ffe3766818?w=600&h=800&fit=crop&auto=format",
-    bio: "Josephine Bracken arrived in Dapitan in January 1895, brought by her ailing adoptive father who sought Rizal's medical skill for his failing eyesight. She stayed. Irish-Filipino, raised in Macao, twenty years old, she became Rizal's companion through his final exile. The Catholic Church refused to perform their marriage without Rizal's full doctrinal recantation — which he declined to give. Accounts suggest they exchanged vows in a private civil ceremony on the morning of his execution, December 30, 1896. She had borne him a son months before who lived only three hours. She kept his memory and his letters for the rest of her life.",
-    quote:
-      "She came to Dapitan seeking sight for her father. She gave sight to me.",
-    quoteSource: "attributed to José Rizal",
-    placeInfo:
-      "Dapitan in 1892 was a remote town on the northwestern tip of Mindanao, chosen by the Spanish colonial government as Rizal's place of exile precisely for its isolation from Manila's political life. But Rizal transformed his banishment into something remarkable: he built a school, a small clinic, a water system, and a sculptural relief map of Mindanao in the town plaza. He corresponded with scientists worldwide, sent botanical and zoological specimens to European museums, and practiced medicine without charge for hundreds of patients.",
-    tributes: [
-      {
-        type: "Poem",
-        title:
-          '"Mi Último Adiós" (My Last Farewell), December 1896',
-        description:
-          "Rizal's final poem — fourteen stanzas of measured, luminous verse — was written in his cell in Fort Santiago the night before his execution. He hid the manuscript inside a small alcohol lamp he had carved by hand. His family found it after his death. The poem is addressed to the Philippines, but its closing lines — tender, resigned, in love with life — are understood as also addressed to Josephine. It is among the greatest poems written in Spanish.",
-      },
-      {
-        type: "Gift",
-        title:
-          "Carved Alcohol Lamp (Secret Hiding Place), 1896",
-        description:
-          'The small lamp Rizal hand-carved during his Dapitan exile served its most famous purpose on the eve of his execution: he hid the rolled manuscript of "Mi Último Adiós" inside it and gave it to Josephine as a keepsake. She brought it out of Fort Santiago past the guards. The lamp is now a national artifact — a plain carved object that contained his last words.',
-      },
-      {
-        type: "Dedication",
-        title:
-          "El Filibusterismo — Completed in Dapitan's Exile",
-        description:
-          "Rizal completed and saw to publication the second of his great novels — El Filibusterismo, a darker and more revolutionary work than Noli Me Tángere — before Josephine arrived. But it was the peace of Dapitan exile, the domestic calm that her presence later extended, that gave him space for the scientific writing, letters, and clinic work of his last years. She was the atmosphere in which his final chapter was lived.",
-      },
-    ],
-  },
+      id: "josephine",
+      numeral: "VIII",
+      name: "Josephine Bracken",
+      years: "1876 – 1902",
+      role: "Common-Law Wife",
+      relationship: "His last love, present until the end",
+      location: "Dapitan, Zamboanga del Norte",
+      mapX: 83.8,
+      mapY: 45.2,
+      portrait:
+        "../../../assets/josephine.webp",
+      bio: "Marie Josephine Leopoldine Bracken was born August 9, 1876 at Victoria Barracks in Hong Kong to Irish parents — James Bracken, a British Army corporal, and Elizabeth Jane McBride. Her mother died shortly after childbirth, and her father gave her up for adoption to his American friend, the blind engineer George Taufer. She traveled to Dapitan in February 1895 to have Rizal, a respected ophthalmologist, examine Taufer's failing eyesight. Taufer's condition was beyond treatment, but Rizal fell for Josephine instead; Taufer initially opposed the relationship but eventually gave in. A local priest agreed to marry them only with the Bishop of Cebu's permission, which never came through before Taufer's abrupt departure forced the matter to stall. The couple's son was stillborn during Rizal's exile. After his execution, colonial authorities pressured her to leave the Philippines; she later remarried in Hong Kong and died of tuberculosis in 1902, at age 25.",
+      quote: "She came to Dapitan seeking sight for her father. She gave sight to me.",
+      quoteSource: "attributed to José Rizal",
+      placeInfo:
+        "Met: February 1895, in Dapitan, Zamboanga del Norte, Philippines — she arrived with her adoptive father, George Taufer, seeking Rizal's help as an ophthalmologist for Taufer's failing eyesight.",
+      tributes: [
+        {
+          type: "Poem",
+          title: "Mi Último Adiós",
+          description:
+            "She is widely believed to be the \"sweet stranger\" mentioned in the closing lines of Rizal's final poem, Mi Último Adiós, written the night before his execution.",
+        },
+        {
+          type: "Dedication",
+          title: "Marriage at Fort Santiago",
+          description:
+            "Hours before he was shot on December 30, 1896, the two were reportedly married at Fort Santiago following his alleged reconciliation with the Catholic Church — though this marriage is disputed, since no official record of it was ever found, despite being attested to by Bracken and the officiating priest.",
+        },
+      ],
+    },
 ];
