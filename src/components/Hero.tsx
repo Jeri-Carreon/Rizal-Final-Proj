@@ -1,3 +1,5 @@
+import logo from "../../assets/logo.png";
+
 export default function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-center text-center px-6 py-28 md:py-40 overflow-hidden bg-background">
@@ -9,6 +11,15 @@ export default function Hero() {
             "radial-gradient(ellipse 80% 60% at 50% 65%, rgba(201,168,76,0.07) 0%, transparent 70%)",
         }}
       />
+
+      {/* Logo */}
+      <div className="relative z-10 mb-8">
+        <img
+          src={logo}
+          alt="Museo Virtual Logo"
+          className="mx-auto w-40 md:w-52 lg:w-64 h-auto"
+        />
+      </div>
 
       {/* Decorative top rule */}
       <div className="relative z-10 w-full max-w-3xl mx-auto mb-10">
