@@ -74,7 +74,7 @@ export default function Hero() {
           className="font-body italic text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto"
           style={{ color: "#9b8860", fontFamily: "'EB Garamond', Garamond, serif" }}
         >
-          Eight women who shaped the mind, the heart, and the legacy of the
+          Ten women who shaped the mind, the heart, and the legacy of the 
           national hero of the Philippines.
         </p>
 
