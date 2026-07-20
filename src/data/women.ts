@@ -7,7 +7,8 @@ import leonorWebpPortrait from "../../assets/Leonor_Rivera.webp";
 import oseiPortrait from "../../assets/osei.webp";
 import suzannePortrait from "../../assets/suzanne-jacoby.webp";
 import josephinePortrait from "../../assets/josephine.webp";
-
+import valenzuelaPortrait from "../../assets/leonor_valenzuela.webp";
+import gertrudePortrait from "../../assets/gertrude_1.webp";
 export interface Tribute {
   type:
     | "Poem"
@@ -43,11 +44,66 @@ export interface Woman {
 }
 
 export const women: Woman[] = [
+   {
+    id: "orang",
+    numeral: "III",
+    name: "Leonor Valenzuela",
+    years: "",
+    role: "Second Love",
+    relationship: "An early, youthful sweetheart",
+    location: "Intramuros, Manila",
+    mapX: 83.6,
+    mapY: 41.89,
+    portrait: valenzuelaPortrait,
+    bio: "Leonor Valenzuela, affectionately called \"Orang,\" was one of Rizal's early sweethearts while he was studying medicine. She lived near Rizal's boarding house in Intramuros, making it easy for them to spend time together. Their relationship was youthful and playful rather than deeply serious, and it eventually ended when Rizal left for Spain in 1882 to continue his studies.",
+    quote: "Isa siyang matangkad na dalagang napakaganda ng tindig (She is a tall young woman who carries herself with grace and elegance)",
+    quoteSource: "– Jose Rizal under. poem “ A La Señorita C.O.Y.P.”",
+    placeInfo:
+      "Rizal met Leonor while he was a second-year medical student at the University of Santo Tomas and staying at Doña Concha Leyva's boarding house in Intramuros, Manila. Leonor lived nearby, and Rizal frequently visited her family's home, which was a popular gathering place for students. Intramuros was the center of Spanish political, religious, and educational life in the Philippines, and the old University of Santo Tomas campus was located within its walls. Students often rented rooms in nearby boarding houses, and wealthy Filipino families lived within or near the Walled City, creating opportunities for social gatherings and courtship among students.",
+    tributes: [
+      {
+        type: "Letters",
+        title: "Secret Letters Written in Invisible Ink",
+        description:
+          "One of the most famous stories about Rizal and Leonor involves the secret letters he wrote to her using invisible ink made from water and salt.",
+      },
+      {
+        type: "Dedication",
+        title: "Frequent Visits",
+        description:
+          "Rizal regularly visited the Valenzuela residence while courting Leonor. Their home became a common meeting place for students, allowing their friendship and courtship to develop naturally.",
+      },
+    ],
+  },
+   {
+    id: "gertrude",
+    numeral: "VII",
+    name: "Gertrude Beckett",
+    years: "",
+    role: "London Romance",
+    relationship: "His sculpting companion, \"Gettie\" or \"Tottie\"",
+    location: "London, England",
+    mapX: 49.9,
+    mapY: 20.6,
+    portrait: gertrudePortrait,
+    bio: "Gertrude Beckett, nicknamed \"Gettie\" or \"Tottie,\" London romance. Genealogical records list her birth year as 1867, and confirm she was the eldest of Charles Beckett's daughters; her relationship with Rizal is dated to May 1888 in London. She helped him mix paint colors and prepare clay for sculpting, and he gave her a group carving of the Beckett sisters as a farewell gift before leaving for Paris. Genealogy sites list Rizal as a \"spouse\" entry for record-keeping purposes, but this reflects a documented romantic relationship, not an actual marriage, no historical source claims they married.",    quote: "Maganda siya, mayumi gaya ng namumukadkad na bulaklak, na may mabubuting mata. (She is beautiful, demure like a budding flower, with kindly eyes)",
+    quoteSource: "– Jose Rizal under. poem “ A La Señorita C.O.y.P.” So called “Rebound Girl”.",
+    placeInfo:
+      "May 1888, in London, England. Rizal boarded at the Beckett family home near the British Museum shortly after arriving in the city.",
+    tributes: [
+        {
+          type: "Sculpture",
+          title: "Group Carving of the Beckett Sisters",
+          description:
+            "Dr. José Rizal gave Gertrude Beckett a composite clay carving of the heads of the Beckett sisters as a parting gift and tribute to their relationship before he left London in March 1889. The primary tribute was a group carving featuring the faces of Gertrude and her two sisters.",
+        },
+      ],
+    },
   {
     id: "teodora",
     numeral: "I",
     name: "Teodora Alonso Realonda",
-    years: "1827 – 1911",
+    years: "",
     role: "Mother",
     relationship: "His first and greatest teacher",
     location: "Calamba, Laguna",
@@ -104,7 +160,7 @@ export const women: Woman[] = [
       id: "leonor",
       numeral: "III",
       name: "Lenoro Rivera Bauzon",
-      years: "1867 – 1893",
+      years: "",
       role: "Great Love",
       relationship: "Greatest love; inspiration for Maria Clara",
       location: "Intramuros, Manila",
@@ -136,7 +192,7 @@ export const women: Woman[] = [
       id: "osei",
       numeral: "IV",
       name: "O-Sei-San (Seiko Usui)",
-      years: "1868 – ?",
+      years: "",
       role: "Japanese Sweetheart",
       relationship: "His companion in Meiji-era Tokyo",
       location: "Tokyo, Japan",
@@ -161,7 +217,7 @@ export const women: Woman[] = [
     id: "nelly",
     numeral: "V",
     name: "Nelly Boustead",
-    years: "1868 – 1936",
+    years: "",
     role: "Parisian Suitor",
     relationship: "His rejected proposal in Biarritz",
     location: "Biarritz, France",
@@ -188,7 +244,7 @@ export const women: Woman[] = [
     id: "consuelo",
     numeral: "VI",
     name: "Consuelo Ortiga y Pérez",
-    years: "1862 – ?",
+    years: "",
     role: "Madrid Admirer",
     relationship: "His carefully restrained affection",
     location: "Madrid, Spain",
@@ -240,7 +296,7 @@ export const women: Woman[] = [
       id: "josephine",
       numeral: "VIII",
       name: "Josephine Bracken",
-      years: "1876 – 1902",
+      years: "",
       role: "Common-Law Wife",
       relationship: "His last love, present until the end",
       location: "Dapitan, Zamboanga del Norte",

@@ -78,7 +78,7 @@ export default function JourneyMap({ onOpenExhibit }: Props) {
         {/* MAP */}
         <div
           className="relative flex-1 overflow-hidden h-full"
-          style={{ minHeight: "560px", height: "clamp(560px, 72vh, 820px)", background: "#0a0703" }}
+          style={{ minHeight: "860px", height: "clamp(560px, 72vh, 820px)", background: "#0a0703" }}
         >
           <img
             src={vintageWorldMap}
