@@ -1,8 +1,12 @@
-import segundaPortrait from "../imports/images.jpeg";
-import leonorPortrait from "../imports/Leonor_Rivera.jpg";
-import leonorThumbnail from "../imports/images-2.jpeg";
 import nellyPortrait from "../../assets/nelly-boustead.jpg";
 import consueloPortrait from "../../assets/consuelo-ortiga.jpg";
+
+import teodoraPortrait from "../../assets/teodora.webp";
+import solisPortrait from "../../assets/solis.webp";
+import leonorWebpPortrait from "../../assets/Leonor_Rivera.webp";
+import oseiPortrait from "../../assets/osei.webp";
+import suzannePortrait from "../../assets/suzanne-jacoby.webp";
+import josephinePortrait from "../../assets/josephine.webp";
 
 export interface Tribute {
   type:
@@ -49,8 +53,7 @@ export const women: Woman[] = [
     location: "Calamba, Laguna",
     mapX: 83.66,
     mapY: 42.1,
-    portrait:
-      "../../../assets/teodora.webp",
+    portrait: teodoraPortrait,
     bio: "Doña Teodora Alonso Realonda was born November 9, 1827, in Manila. As José's first teacher, she taught him the alphabet, prayers, and the value of education long before he entered formal schooling, and Rizal often credited her for nurturing his love of reading, literature, and learning. In 1871, she was imprisoned by Spanish colonial authorities on false accusations of attempted poisoning, an injustice that deeply affected Rizal and became one of the earliest personal events shaping his reformist ideals. Throughout his years abroad, Rizal regularly wrote letters to his mother, updating her about his studies and expressing concern for her health, and his greatest tribute was becoming an ophthalmologist so he could treat her worsening cataracts and restore her eyesight. She died August 16, 1911.",
     quote:
       "She was my first teacher, and the most thorough I have ever had.",
@@ -82,7 +85,7 @@ export const women: Woman[] = [
     location: "Trozo, Manila",
     mapX: 83.61,
     mapY: 41.89,
-    portrait: "../../../assets/solis.webp",
+    portrait: solisPortrait,
     bio: "Segunda Solis Katigbak was a young woman from Lipa, Batangas, and is widely recognized as Jose Rizal's first love. She came from a respected family and was known for her beauty, intelligence, and gentle personality. Rizal was about 16 years old when they met, while Segunda was around 14 years old. Their romance was short-lived because Segunda was already engaged to Manuel Luz, a fellow Batangueño. Despite this, Rizal regarded her as his first experience of romantic love, and the memory remained significant throughout his life.",
     quote: "She was the first to awaken in me the idea of what love might someday be.",
     quoteSource: "José Rizal, private diary, circa 1877",
@@ -107,8 +110,8 @@ export const women: Woman[] = [
       location: "Intramuros, Manila",
       mapX: 83.6,
       mapY: 41.89,
-      portrait: "../../../assets/Leonor_Rivera.webp",
-      thumbnail: "../../../assets/Leonor_Rivera.webp",
+      portrait: leonorWebpPortrait,
+      thumbnail: leonorWebpPortrait,
       bio: "Lenoro Rivera Bauzon born on April 11, 1867, died on August 28. 1893. She was Rizal's long-time sweetheart and fiancée, and their relationship lasted for about eleven years, mostly maintained through letters while Rizal studied in Europe. Her family, particularly her mother, was against their relationship and secretly withheld many of Rizal's letters. Eventually, she got married to the British railway engineer Henry Charles Kipping, which left Rizal heartbroken. Leonor became the inspiration for Maria Clara, who is the heroine of Noli Me Tangere. Their romance remains one of the best-known love stories in Philippine history and significantly influenced Rizal's emotional life and literary works.",
       quote: "Though seas divide us, nothing shall divide my love for you.",
       quoteSource: "Leonor Rivera, letter to José Rizal, 1887",
@@ -139,7 +142,7 @@ export const women: Woman[] = [
       location: "Tokyo, Japan",
       mapX: 88.79,
       mapY: 30.18,
-      portrait: "../../../assets/osei.webp",
+      portrait: oseiPortrait,
       bio: "Seiko Usui, also affectionately called O-Sei-San, belonged to a respected Japanese family and met Rizal during his stay in Tokyo in 1888. She was fluent in English and French, as she served as Rizal's guide, interpreter, and companion as he explored Japanese culture. Their relationship lasted only about a month before Rizal continued his journey to the United States. Rizal admired O-Sei-San's intelligence, independence, and patriotism. He was also reportedly tempted to remain in Japan permanently, but he ultimately chose to continue his mission for the Philippines.",
       quote: "It was a happy golden month I spent with you.",
       quoteSource: "José Rizal, farewell note to O-Sei-San, 1888",
@@ -218,8 +221,7 @@ export const women: Woman[] = [
       location: "Brussels, Belgium",
       mapX: 51.21,
       mapY: 21.75,
-      portrait:
-        "../../../assets/suzanne-jacoby.webp",
+      portrait: suzannePortrait,
       bio: "Suzanne Jacoby was a Belgian woman, the niece of Rizal's landlady in Brussels, where he lived while writing El Filibusterismo. She reportedly grew fond of him during his stay, and when he departed for Madrid in 1890, she wept at his leaving. She continued writing to him afterward, though, as with several of the women in his life, no specific poem or major surviving tribute is documented for her the way there is for Leonor Rivera or Consuelo Ortiga.",
       quote: "She reminded me that even a man carrying a nation may sometimes laugh.",
       quoteSource: "José Rizal, letter to Blumentritt, 1890",
@@ -244,8 +246,7 @@ export const women: Woman[] = [
       location: "Dapitan, Zamboanga del Norte",
       mapX: 84.28,
       mapY: 45.19,
-      portrait:
-        "../../../assets/josephine.webp",
+      portrait: josephinePortrait,
       bio: "Marie Josephine Leopoldine Bracken was born August 9, 1876 at Victoria Barracks in Hong Kong to Irish parents — James Bracken, a British Army corporal, and Elizabeth Jane McBride. Her mother died shortly after childbirth, and her father gave her up for adoption to his American friend, the blind engineer George Taufer. She traveled to Dapitan in February 1895 to have Rizal, a respected ophthalmologist, examine Taufer's failing eyesight. Taufer's condition was beyond treatment, but Rizal fell for Josephine instead; Taufer initially opposed the relationship but eventually gave in. A local priest agreed to marry them only with the Bishop of Cebu's permission, which never came through before Taufer's abrupt departure forced the matter to stall. The couple's son was stillborn during Rizal's exile. After his execution, colonial authorities pressured her to leave the Philippines; she later remarried in Hong Kong and died of tuberculosis in 1902, at age 25.",
       quote: "She came to Dapitan seeking sight for her father. She gave sight to me.",
       quoteSource: "attributed to José Rizal",
